@@ -107,7 +107,7 @@ main img {
   outline: auto;
   font-family: Inter;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .Members {
@@ -252,6 +252,7 @@ main img {
   background: #0F051D;
 }
 
+/*Arrumar os componentes de button de passar aos lados*/
 #Left , #Rigth{
   display: none;
   width: 40px;
@@ -287,3 +288,122 @@ main img {
   font-weight: 700;
   line-height: 21.6px;
 }
+
+/*3 Parte da page*/
+#Choose {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  
+  grid-template-rows: minmax(10%, 10%) minmax(10%, 55%) minmax(10%, 15%) minmax(10%, 20%);
+  height: 100vh;
+}
+
+.us {
+  display: grid;
+  row-gap: 5%;
+  grid-template-rows: 20% ;
+}
+
+.us h2 {
+  margin: 0;
+  color: #0F051D;
+  text-align: center;
+  font-family: Inter;
+  font-size: 30px;
+  
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+}
+
+.us h2 span {
+  background: linear-gradient(71deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.itensCho {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 17%);
+  column-gap: 2%;
+  grid-template-rows: 40vh;
+}
+
+.huge, .quality, .resource, .community {
+  display: grid;
+  justify-content: flex-start;
+}
+
+.quality, .community {
+  align-items: end;
+}
+
+.huge div, .quality div, .resource div, .community div {
+  display: grid;
+  align-content: center;
+  gap: 5%;
+
+  height: 80%;
+  width: fit-content;
+  border-radius: 24px;
+  border: 1px solid rgba(131, 131, 131, 0.25); 
+}
+
+.huge div h4, .quality div h4, .resource div h4, .community div h4 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30.8px; /* 110% */
+  padding: 0 0 0 10%;
+}
+
+.huge p, .quality p, .resource p, .community p {
+  margin: 0;
+  color: #7B7583;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  
+  padding: 0 20% 0 10%;
+}
+
+.conectados {
+  display: flex;
+  gap: 4rem;
+}
+
+.conectados div {
+  display: grid; 
+}
+
+.conectados div h3 {
+  margin: 0;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 72px;
+  color: #0F051D;
+}
+
+.conectados div h3 {
+  font-size: 30px;
+}
+
+.conectados div p {
+  margin: 0;
+  color: #7B7583;
+
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.6px;
+}
+
+/*3Page*/
