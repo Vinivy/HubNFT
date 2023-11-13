@@ -407,3 +407,81 @@ main img {
 }
 
 /*3Page*/
+#Works {
+  display: grid;
+  justify-items: center;
+
+  height: 125vh;
+  grid-template-rows: 14px 34px 221px 198px 206px;
+  grid-row-gap: 4%;
+
+  margin: 2em 0 0 0 ;
+}
+
+.How {
+  display: flex;
+  gap: 10px;
+
+  margin: 0;
+  color: #0F051D;
+  font-family: Inter;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+#Works h2 span {
+  background: linear-gradient(60deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wallet, .artwork, .plataform {
+  display: grid;
+  justify-items: center;
+    justify-content: center;
+  grid-template-columns: minmax(100px, 150%) minmax(100px, 50%);
+  
+  column-gap: 5rem;
+}
+
+.wallet  div, .artwork  div, .plataform  div {
+  display: grid;
+  gap: 5%;
+}
+
+.wallet  div h3, .artwork  div h3, .plataform  div h3 {
+  margin: 0;
+  font-family: Inter;
+  font-size: 13px;
+  line-height: 33px; /* 173.684% */
+
+  background: linear-gradient(30deg, #2600FC 0%, #FF00EA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wallet div h2, .artwork div h2, .plataform div h2 {
+  margin: 0;
+  color: #0F051D;
+  font-family: Inter;
+  
+  font-style: normal;
+  font-weight: 700;
+  
+} 
+.wallet div h2, .plataform div h2 {
+  font-size: 26px;
+} .artwork div h2{
+  font-size: 23px;
+} 
+
+.wallet  div p, .artwork  div p, .plataform  div p {
+  margin: 0;
+  color: #7B7583;
+  font-family: Inter;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  
+}
