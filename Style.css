@@ -411,8 +411,8 @@ main img {
   display: grid;
   justify-items: center;
 
-  height: 125vh;
-  grid-template-rows: 14px 34px 221px 198px 206px;
+  height: 150vh;
+  grid-template-rows: 14px 34px 27% 25% 26%;
   grid-row-gap: 4%;
 
   margin: 2em 0 0 0 ;
@@ -439,15 +439,16 @@ main img {
 .wallet, .artwork, .plataform {
   display: grid;
   justify-items: center;
-    justify-content: center;
-  grid-template-columns: minmax(100px, 150%) minmax(100px, 50%);
+  justify-content: start;
+  grid-template-columns: minmax(100px, 16rem) minmax(100px, 15rem);
   
   column-gap: 5rem;
 }
 
 .wallet  div, .artwork  div, .plataform  div {
   display: grid;
-  gap: 5%;
+  text-align: top;
+  
 }
 
 .wallet  div h3, .artwork  div h3, .plataform  div h3 {
@@ -484,4 +485,10 @@ main img {
   font-style: normal;
   font-weight: 400;
   
+}
+
+/*4 parte*/
+#drop {
+  display: grid;
+  justify-content: center;
 }
