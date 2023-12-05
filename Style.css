@@ -511,30 +511,39 @@ main img {
 /*6 Page*/
 #Rodmap {
   display: grid;
-
+  justify-items: center;
   grid-template-rows: minmax(10%, 10%) minmax(20%, 90%) ;
-  height: 70vh;
+  height: 105vh;
 }
 
 .Map {
   display: grid;
   grid-template-rows: repeat(2, 45%);
-  grid-template-columns: repeat(3, 25%);
+  grid-template-columns: repeat(3, 22%);
   height: 100vh;
-  grid-gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 1.5rem;
   
   justify-content: center;
 }
 
 .Map section {
   display: grid;
+  justify-content: center;
+  
   border-radius: 32px;
   border: 1px solid rgba(131, 131, 131, 0.25);
 }
 
 .Map section p {
+  justify-self: center;
   padding: 0;
   margin: 0;
+  font-size: 11px;
+  line-height: 15px;
+  font-family: Inter;
+  font-weight: 400;
+  color: #7B7583;
 }
 
 .Map section span {
@@ -557,6 +566,10 @@ main img {
   font-weight: 700;
 }
 
+.Map section span p {
+  color: #FFF;
+}
+
 .porcentagem {
   display: flex;
   align-items: center;
@@ -570,6 +583,262 @@ main img {
   font-weight: 700;
   line-height: 16px; 
   background: linear-gradient(66deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.conteudo {
+  justify-self: center;
+  padding: 0 1rem 0 0;
+  width: 62%;
+}
+
+/*7 page*/
+#Artistic {
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+
+  height: 100vh;
+  margin: 2rem 0 0 ;
+}
+
+.artics {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 20% 80%;
+  height: 75vh;
+}
+
+.artics h3 {
+  display: flex;
+  align-self: center;
+  margin: 0;
+  line-height: 30px;
+  gap: 10px;
+  color: #0F051D;
+  font-family: Inter;
+  font-size: 34px;
+  font-weight: 700;
+} 
+
+.artics h3 span {
+  background: linear-gradient(69deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.artics section {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  justify-content: center;
+}
+
+.Step, .Andry, .Zaid, .Laila {
+  display: grid;
+  justify-items: center;
+
+  gap: 3%;
+  height: 80%;
+}
+
+.Step, .Zaid {
+  align-self: end;
+  
+}
+
+.Step h4, .Andry h4, .Zaid h4, .Laila h4 {
+  margin: 1rem 0 0 0;
+  color: #0F051D;
+
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+}
+
+.Step p, .Andry p, .Zaid p, .Laila p {
+  color: #7B7583;
+  margin: 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.Step ul, .Andry ul, .Zaid ul, .Laila ul{
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.Step ul ion-icon, .Andry ul ion-icon, .Zaid ul ion-icon, .Laila ul  ion-icon {
+  font-size: 25px;
+}
+
+/* 8 page */
+#Question { 
+  display: grid;
+  row-gap: 5%;
+  grid-template-rows: 20% 80%;
+  justify-content: center;
+ 
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+
+  height: 95vh;
+  margin: 1rem 0 1rem 0;
+}
+
+#Question h2 {
+  text-align: center;
+  color: #0F051D;
+  font-family: Inter;
+  font-size: 34px;
+  font-weight: 700;
+} #Question h2 span {
+  background: linear-gradient(69deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+#Question div {
+  display: grid;
+
+  border-radius: 24px;
+  border: 1px solid rgba(131, 131, 131, 0.25);
+  height: 90%;
+  width: 40rem;
+}
+
+/*Fazer a trocação de icons ao apertar*/
+details summary, details {
+  /*Serve para tirar as propriedades do html*/
+  all: unset;
+  color: #0F051D;
+  font-family: Inter;
+  font-size: 15px;
+  
+  font-weight: 700;
+  line-height: 26.4px; /* 125.714% */
+
+} details p {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: Inter;
+  font-weight: 400;
+  color: #7B7583;
+} summary::after {
+  content: '\25B6'; /* Símbolo de seta para a direita */
+  display: inline-block;
+  margin-left: 8px; /* Adicione espaçamento se necessário */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para a animação */
+}details {
+  margin: 5% 0 0 10%;
+}
+
+details[open] summary::after {
+  transform: rotate(90deg); /* Rotaciona a seta quando o detalhe está aberto */
+}
+
+/*END*/
+#End {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-rows: 25% 10% 10%;
+
+  grid-template-rows: minmax(5%, 5%) minmax(20%, 95%);
+  grid-template-columns: auto;
+
+  height: 105vh;
+}
+
+#End h3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  
+  color: #0F051D;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#End h3 span {
+  background: linear-gradient(69deg, #2600FC 0%, #FF00EA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#End p {
+  color: #7B7583;
+  text-align: center;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#TheEnd {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-rows: 31% 10% 10%;
+ 
+  width: 98vw;
+  height: 35vw;
+  row-gap: 10px;
+  background: url(./Assets/Background/End.jpg) center; 
+}
+
+#End div button {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+
+  gap: 7%;
+  color: #FFF;
+  font-weight: 700;
+  line-height: 19.2px;
+  font-family: Inter;
+  font-size: 15px;
+
+  width: 15%;
+  height: 32px;
+
+  border: 0;
+  border-radius: 50px;
+  background: linear-gradient(51deg, #2600FC 0%, #FF00EA 100%);
+}
+
+footer {
+  display: grid;
+
+  grid-template-columns: minmax(10%, 30%) minmax(10%,15%) minmax(10%,15%);
+  width: 98vw;
+}
+
+footer .NHUB {
+ 
+}
+
+footer .NHUB h2 {
+  text-align: center;
+  font-family: Orbitron;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+ 
+  background: var(--linear, linear-gradient(58deg, #2600FC 0%, #FF00EA 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
