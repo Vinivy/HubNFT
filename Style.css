@@ -16,21 +16,10 @@ body {
   background:  url(./Assets/Background/BackgroundHome.jpg) ;
 }
 
-/*estilo de aparição em scroll*/
-.show {
-  opacity: 1;
-  transition: all 1s;
-  transform: translateX(0);
-}
-
 header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  opacity: 0;
-  transition: all 1s;
-  transform: translateX(-100%);
 }
  
 header h3 {
@@ -69,13 +58,13 @@ main {
   display: grid;
   justify-content: center;
   align-items: center;
-  
 
-  grid-template-columns: minmax(10%, 23%) minmax(20%,30%);
+  grid-template-columns: minmax(10%, 29%) minmax(20%,35%);
+  column-gap: 2rem;
 }
 
 main img {
-  width: 110%;
+  width: 90%;
 }
 
 .Info {
@@ -112,13 +101,14 @@ main img {
   color: #ffff;
   background: linear-gradient(62deg, #2600FC 0%, #FF00EA 100%);
 
-  width: 52%;
+  max-width: 35%;
+  min-width: 35%;
   height: 41px;
 
   outline: auto;
   font-family: Inter;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .Members {
@@ -336,6 +326,30 @@ main img {
   -webkit-text-fill-color: transparent;
 }
 
+/*estilo de aparição em scroll*/
+.show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateX(0);
+}
+
+.Transitiontop {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0);
+
+  margin: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  gap: 3%;
+  height: 80%;
+}.Transitiontop ul {
+  margin: 0;
+}
+ 
+
 .itensCho {
   display: grid;
   justify-content: center;
@@ -347,13 +361,15 @@ main img {
 .huge, .quality, .resource, .community {
   display: grid;
   justify-content: flex-start;
+  transition: all 1s;
+  transform: translatey(80%) ;
+  opacity: 0;
 }
-
 .quality, .community {
   align-items: end;
 }
 
-.huge div, .quality div, .resource div, .community div {
+.Transitiontop div ,.huge div, .quality div, .resource div, .community div {
   display: grid;
   align-content: center;
   gap: 5%;
@@ -364,7 +380,7 @@ main img {
   border: 1px solid rgba(131, 131, 131, 0.25); 
 }
 
-.huge div h4, .quality div h4, .resource div h4, .community div h4 {
+.Transitiontop div h4, .huge div h4, .quality div h4, .resource div h4, .community div h4 {
   margin: 0;
   font-family: Inter;
   font-size: 18px;
@@ -373,7 +389,7 @@ main img {
   padding: 0 0 0 10%;
 }
 
-.huge p, .quality p, .resource p, .community p {
+.Transitiontop p, .huge p, .quality p, .resource p, .community p {
   margin: 0;
   color: #7B7583;
   font-family: Inter;
@@ -456,10 +472,18 @@ main img {
   column-gap: 5rem;
 }
 
+.antiondireitaOne {
+  opacity: 0;
+  transform: translateX(80%);
+}
+.antiondireitaTwo {
+  opacity: 0;
+  transform: translateX(-80%);
+}
+
 .wallet  div, .artwork  div, .plataform  div {
   display: grid;
-  text-align: top;
-  
+  text-align: top; 
 }
 
 .wallet  div h3, .artwork  div h3, .plataform  div h3 {
@@ -495,8 +519,29 @@ main img {
   font-size: 9px;
   font-style: normal;
   font-weight: 400;
-  
 }
+
+.carteira, .quadro, .Sell {
+  display: flex;
+  gap: 5px; 
+  width: 200px;
+  align-self: center;
+  justify-self: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+
+  transition: all 1s;
+  opacity: 0;
+}
+
+.carteira, .Sell {
+  transform: translateX(-100%);
+}.quadro {
+  transform: translateX(100%);
+}
+
 
 /*5 parte*/
 #drop {
@@ -657,7 +702,13 @@ main img {
 
 .Step, .Zaid {
   align-self: end;
-  
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.Andry, .Laila {
+  transform: translateY(-50%);
+  opacity: 0;
 }
 
 .Step h4, .Andry h4, .Zaid h4, .Laila h4 {
@@ -693,7 +744,6 @@ main img {
 /* 8 page */
 #Question { 
   display: grid;
-  row-gap: 5%;
   grid-template-rows: 20% 80%;
   justify-content: center;
  
@@ -779,7 +829,7 @@ details[open] summary::after {
   
   color: #0F051D;
   font-family: Inter;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 700;
 }
 
@@ -792,18 +842,24 @@ details[open] summary::after {
 
 #End p {
   color: #7B7583;
-  text-align: center;
+  
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
 }
 
+.minting {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 #TheEnd {
   display: grid;
   justify-items: center;
   align-content: center;
-  grid-template-rows: 31% 10% 10%;
+  grid-template-rows: 37% 10% 8%;
  
   width: 98vw;
   height: 35vw;
@@ -822,9 +878,9 @@ details[open] summary::after {
   font-weight: 700;
   line-height: 19.2px;
   font-family: Inter;
-  font-size: 15px;
+  font-size: 11px;
 
-  width: 15%;
+  width: 10%;
   height: 32px;
 
   border: 0;
@@ -833,25 +889,68 @@ details[open] summary::after {
 }
 
 footer {
+  justify-self: center;
+  align-self: center;
   display: grid;
-
-  grid-template-columns: minmax(10%, 30%) minmax(10%,15%) minmax(10%,15%);
+  justify-content: center;
+  column-gap: 21%;
+  grid-template-columns: minmax(10%, 30%) minmax(10%,27%);
   width: 98vw;
+  height: 38vh;
 }
 
-footer .NHUB {
- 
+footer section {
+ display: grid;
+ grid-template-columns: minmax(20%, 50%) minmax(20%, 50%);
 }
 
 footer .NHUB h2 {
-  text-align: center;
   font-family: Orbitron;
-  font-size: 12px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 800;
+  margin: 0;
+  text-align: left;
  
   background: var(--linear, linear-gradient(58deg, #2600FC 0%, #FF00EA 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.NHUB div {
+  display: flex;
+  gap: 3%;
+}
+
+.Quick, .works {
+  display: flex;
+  
+  flex-direction: column;
+
+  padding: 1rem 0 0 0;
+}
+
+.Quick ul, .works ul {
+  display: grid; 
+  list-style: none;
+  margin: 0; 
+  padding: 10px 0 0 0; 
+  gap: 9%; 
+
+  color: #7B7583; 
+  font-family: Inter; 
+  font-size: 13px; 
+  font-style: normal; 
+  font-weight: 400;
+}
+
+.Quick h4, .works h4 {
+  color: #0F051D;
+
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26.4px;
 }
