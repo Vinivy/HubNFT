@@ -65,3 +65,20 @@ const description = new IntersectionObserver((Desc) => {
  infosDireict.forEach((Yes) => {
   description.observe(Yes)
 })
+
+function toggleDarkMode() {
+  const body = document.querySelector('body')
+  const Home = document.querySelector('#Home')
+  const End = document.querySelector('#TheEnd')
+
+  if (!body.classList.contains('Dark')) {
+    body.classList.add('Dark')
+    Home.style.background = 'rgba(31, 21, 43, 1)' 
+    End.style.background = 'rgba(31, 21, 43, 1)'
+  } else {
+    body.classList.remove('Dark')
+    Home.style.background = 'url(./Assets/Background/BackgroundHome.jpg)'
+    End.style.background = 'url(./Assets/Background/End.jpg)'
+  }
+}
+
