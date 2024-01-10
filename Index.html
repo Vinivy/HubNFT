@@ -20,10 +20,10 @@
           <li>Blog</li>
         </ul>
         <div class="Redes">
-          <ion-icon name="logo-twitter"></ion-icon>
-          <ion-icon name="logo-discord"></ion-icon>
-          <ion-icon name="logo-instagram"></ion-icon>
-          <ion-icon name="wallet"></ion-icon>
+          <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+          <ion-icon id="Discord" name="logo-discord"></ion-icon>
+          <ion-icon id="Instagram" name="logo-instagram"></ion-icon>
+          <ion-icon id="Wallet" name="wallet"></ion-icon>
         </div>
       </header>
       <main>
@@ -43,19 +43,19 @@
           </div>
         </div>
         <img src="/Assets/Componentes/Adds/Objects.png" alt="">
-        <button id="DarkMode" onclick="toggleDarkMode()">
-          <img src="./Assets/Mod/Sun.svg" alt="">
+        <button style="display: flex; align-items: center;" id="DarkMode" onclick="toggleDarkMode()">
+          <ion-icon style="color: white;" id="Sun" name="sunny-outline"></ion-icon>
         </button>
       </main>
     </section>
 
     <section id="Colletion">
       <div class="MarcasFundadoras">
-       <img src="./Assets/Componentes/Marcas/MetaMask.png"  style= "max-width: 100px; min-width: 70px;"  alt="">
-       <img src="./Assets/Componentes/Marcas/BitGo.png" style= "max-width: 100px; min-width: 70px;" alt="">
-       <img src="./Assets/Componentes/Marcas/CoinBase.png" style= "max-width: 100px; min-width: 70px;" alt="">
-       <img src="./Assets/Componentes/Marcas/TrustWallet.png" style= "max-width: 100px; min-width: 70px;" alt="">
-       <img src="./Assets/Componentes/Marcas/EXODUS.png" style= "max-width: 100px; min-width: 70px;" alt="">
+       <img class="Mask" src="./Assets/Componentes/Marcas/MetaMask.svg"  style= "max-width: 100px; min-width: 70px;"  alt="">
+       <img class="BitGo" src="./Assets/Componentes/Marcas/BitGo.svg" style= "max-width: 100px; min-width: 70px;" alt="">
+       <img class="CoinBase" src="./Assets/Componentes/Marcas/CoinBase.svg" style= "max-width: 100px; min-width: 70px;" alt="">
+       <img class="TrustWallet" src="./Assets/Componentes/Marcas/TrustWallet.svg" style= "max-width: 100px; min-width: 70px;" alt="">
+       <img class="Exodus" src="./Assets/Componentes/Marcas/EXODUS.svg" style= "max-width: 100px; min-width: 70px;" alt="">
       </div>
 
       <img src="./Assets/Componentes/Adds/VectorEntres.svg" alt="">
@@ -64,26 +64,26 @@
         <h1 style="display: flex; gap: 10px;" >Nfthub's <span>collection</span></h1>
         <div class="NFTS">
           <button id="Left"> <ion-icon name="left"></ion-icon></button>
-          <picture>
-            <img src="/Assets/Componentes/ArtesNFTS/MetaVerse.jpg" style="width: 164px;" alt="">
+          <div class="picture">
+            <img src="/Assets/Componentes/ArtesNFTS/MetaVerse.jpg" style="width: 68%; border-radius: 5%;" alt="">
             <h3>#Metaverse</h3>
             <p>By TheSalvare</p>
-          </picture>
-          <picture>
-            <img src="/Assets/Componentes/ArtesNFTS/Pollioll.jpg" style="width: 164px;" alt="">
+          </div>
+          <div class="picture">
+            <img src="/Assets/Componentes/ArtesNFTS/Pollioll.jpg" style="width: 70%; border-radius: 5%;" alt="">
             <h3>#Polly Doll</h3>
             <p>By TheNative</p>
-          </picture>
-          <picture>
-            <img src="/Assets/Componentes/ArtesNFTS/Alec.jpg" style="width: 164px;" alt="">
+          </div>
+          <div class="picture">
+            <img src="/Assets/Componentes/ArtesNFTS/Alec.jpg" style="width: 68%; border-radius: 5%;" alt="">
             <h3>#Alec Art</h3>
             <p>By GeorgZvic</p>
-          </picture>
-          <picture>
-            <img src="/Assets/Componentes/ArtesNFTS/Toxic.jpg" style="width: 164px;" alt="">
+          </div>
+          <div class="picture">
+            <img src="/Assets/Componentes/ArtesNFTS/Toxic.jpg" style="width: 70%; border-radius: 5%;" alt="">
             <h3>#Toxic Poeth</h3>
             <p>By YazoiLup</p>
-          </picture>
+          </div>
           <button id="Rigth"><ion-icon name="rigth"></ion-icon></button>
         </div>
         <!--ADICIONAR FUNCIONALIDADE AQUI-->
@@ -242,7 +242,7 @@
         <h2 style="
           display: flex; 
           gap: 5px; 
-          color: #0F051D;
+          color: var(--GraphicColor);
           margin: 0;
 
           text-align: center;
@@ -261,11 +261,11 @@
           font-style: normal;
           font-weight: 400;
         ">Subscribe to our super-rare and exclusive drops & collectibles.</p>
-        <div style="display: flex; ">
+        <div style="display: flex; justify-content: space-evenly; width: 100%;">
           <input type="text" placeholder="Enter your email" style="
             padding: 0 0 0 20px;
             outline: none;
-            width: 322px;
+            width: 60%;
             height: 2rem;
             border: 0;
             color: #7B7583;
@@ -274,7 +274,6 @@
             font-weight: 400;
             border-radius: 50px;
             background: rgba(0, 0, 0, 0.05);
-            margin: 0 1rem 0 0;
           " >
 
           <button style="
@@ -283,7 +282,7 @@
            line-height: 19.2px;
            font-family: Inter;
            font-size: 10px;
-           width: 25%;
+           width: 20%;
            border: 0;
            border-radius: 50px;
            background: linear-gradient(51deg, #2600FC 0%, #FF00EA 100%);
@@ -298,7 +297,7 @@
         display: flex;
         gap: 10px;
         margin: 0;
-        color: #0F051D;
+        color: var(--GraphicColor);
         
         font-family: Inter;
         font-size: 34px;
@@ -323,9 +322,7 @@
               background: rgba(131, 131, 131, 0.25);
               ">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -342,9 +339,7 @@
               height: 1px;
               background: rgba(131, 131, 131, 0.25);">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -361,9 +356,7 @@
               height: 1px;
               background: rgba(131, 131, 131, 0.25);">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -380,9 +373,7 @@
               height: 1px;
               background: rgba(131, 131, 131, 0.25);">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -399,9 +390,7 @@
               height: 1px;
               background: rgba(131, 131, 131, 0.25);">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -418,9 +407,7 @@
               height: 1px;
               background: rgba(131, 131, 131, 0.25);">
             </span>
-            <p style="
-              color: #0F051D; line-height: 25.2px; padding:10px 0 10px 0; font-size:12px;
-            ">Release website and logo</br>
+            <p id="Release">Release website and logo</br>
              Crow community</br>
               Lauch the project</p>
           </div>
@@ -443,9 +430,9 @@
             <h4>Step Jobs</h4>
             <p>Artist</p>
             <ul>
-              <ion-icon name="logo-twitter"></ion-icon>
-              <ion-icon name="logo-discord"></ion-icon>
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+              <ion-icon id="Discord" name="logo-discord"></ion-icon>
+              <ion-icon id="Instagram" name="logo-instagram"></ion-icon>
             </ul>
           </div>
           <div class="Andry">
@@ -458,9 +445,9 @@
             <h4>Andry Moray</h4>
             <p>Blockchain</p>
             <ul>
-             <ion-icon name="logo-twitter"></ion-icon>
-             <ion-icon name="logo-discord"></ion-icon>
-             <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+              <ion-icon id="Discord" name="logo-discord"></ion-icon>
+              <ion-icon id="Instagram" name="logo-instagram"></ion-icon>
             </ul>
           </div>
           <div class="Zaid">
@@ -473,9 +460,9 @@
             <h4>Zaid Ed</h4>
             <p>Developer</p>
             <ul>
-              <ion-icon name="logo-twitter"></ion-icon>
-              <ion-icon name="logo-discord"></ion-icon>
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+              <ion-icon id="Discord" name="logo-discord"></ion-icon>
+              <ion-icon id="Instagram" name="logo-instagram"></ion-icon>
             </ul>
           </div>
           <div class="Laila">
@@ -488,9 +475,9 @@
             <h4>Laila Ed</h4>
             <p>Markting</p>
             <ul>
-              <ion-icon name="logo-twitter"></ion-icon>
-              <ion-icon name="logo-discord"></ion-icon>
-              <ion-icon name="logo-instagram"></ion-icon>
+              <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+              <ion-icon id="Discord" name="logo-discord"></ion-icon>
+              <ion-icon id="Instagram" name="logo-instagram"></ion-icon>
             </ul>
           </div>
         </section>
@@ -546,9 +533,9 @@
               Twitter to keep up to date with our latest work
               and announcements.</p>
               <div>
-                <ion-icon name="logo-twitter"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon id="Twitter" name="logo-twitter"></ion-icon>
+                <ion-icon id="Discord" name="logo-discord"></ion-icon>
+                <ion-icon id="Instagram" name="logo-youtube"></ion-icon>
               </div>
           </div>
           <section>
@@ -576,6 +563,7 @@
             font-size: 10px;
             font-style: normal;
             font-weight: 400;
+            align-self: center;
             ">Copyright © 2023 Nfthub All Rights Reserved.</span>
             <ul>
               <li style="

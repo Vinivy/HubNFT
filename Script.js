@@ -26,8 +26,7 @@ const observ = new IntersectionObserver((Puxando) => {
       atribuindo.target.classList.remove('huge', 'quality', 'resource', 'community')
       atribuindo.target.classList.add('Transitiontop')
     }else {
-      atribuindo.target.classList.remove('Transitiontop')
-      
+      atribuindo.target.classList.remove('Transitiontop')      
     }
   })
 })
@@ -67,18 +66,56 @@ const description = new IntersectionObserver((Desc) => {
 })
 
 function toggleDarkMode() {
-  const body = document.querySelector('body')
-  const Home = document.querySelector('#Home')
-  const End = document.querySelector('#TheEnd')
+  let body = document.querySelector('body')
+  let Home = document.querySelector('#Home')
+  let End = document.querySelector('#TheEnd')
+  /*Imgs dos patrocinio */
+  let Mask = document.querySelector('.Mask')
+  let BitGo = document.querySelector('.BitGo')
+  let CoinBase = document.querySelector('.CoinBase')
+  let TrustWallet = document.querySelector('.TrustWallet')
+  let Exodus = document.querySelector('.Exodus')
+  /*redes */
+  let Twi = document.querySelector('ion-icon')
+  let Ds = document.querySelector('#Discord')
+  let Ins = document.querySelector('#Instagram')
+  let Wall = document.querySelector('#Wallet')
+  let Sn = document.querySelector('#Sun')
+
 
   if (!body.classList.contains('Dark')) {
     body.classList.add('Dark')
     Home.style.background = 'rgba(31, 21, 43, 1)' 
     End.style.background = 'rgba(31, 21, 43, 1)'
+
+    Mask.setAttribute('src', './Assets/Componentes/Marcas/MetaMaskDark.svg')
+    BitGo.setAttribute('src','./Assets/Componentes/Marcas/BitGoDark.svg')
+    CoinBase.setAttribute('src', './Assets/Componentes/Marcas/CoinBase.svg')
+    TrustWallet.setAttribute('src', './Assets/Componentes/Marcas/TrustWalletDark.svg')
+    Exodus.setAttribute('src', './Assets/Componentes/Marcas/EXODUSDark.svg')
+
+    Twi.style.color = '#ffffff'
+    Ds.style.color = '#ffffff'
+    Ins.style.color = '#ffffff' 
+    Wall.style.color = '#ffffff'
+    Sn.style.color = 'black'
+
   } else {
     body.classList.remove('Dark')
     Home.style.background = 'url(./Assets/Background/BackgroundHome.jpg)'
     End.style.background = 'url(./Assets/Background/End.jpg)'
+
+    Mask.setAttribute('src', './Assets/Componentes/Marcas/MetaMask.svg')
+    BitGo.setAttribute('src','./Assets/Componentes/Marcas/BitGo.svg')
+    CoinBase.setAttribute('src', './Assets/Componentes/Marcas/CoinBase.svg')
+    TrustWallet.setAttribute('src', './Assets/Componentes/Marcas/TrustWallet.svg')
+    Exodus.setAttribute('src', './Assets/Componentes/Marcas/EXODUS.svg')
+
+   Twi.style.color = 'black'
+   Ds.style.color = 'black'
+   Ins.style.color = 'black'
+   Wall.style.color = 'black'
+   Sn.style.color = '#ffffff'
   }
 }
 
