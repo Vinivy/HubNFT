@@ -118,4 +118,7 @@ function toggleDarkMode() {
    Sn.style.color = '#ffffff'
   }
 }
-
+ 
+function onMobile() {
+  
+}

@@ -33,6 +33,22 @@ header {
   justify-content: space-around;
   align-items: center;
 }
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pseud, .NERKO {
+  display: none;
+}
+.NERKO {
+  height: 13%;  align-items: center; padding: 0 0 0 5%;
+}
+.Redes {
+  display: flex;
+  align-items: center;
+}
  
 header h3 {
   color: var(--GraphicColor);
@@ -48,6 +64,7 @@ header ul {
   display: flex;
   gap: 10px;
   list-style: none; 
+  padding: 0;
 }
 
 header ul li {
@@ -59,6 +76,14 @@ header ul li {
   font-weight: 600;
   line-height: 20px; /* 111.111% */
   text-transform: capitalize;
+}
+
+header button {
+  display: none;
+}
+
+.onMobile {
+  display: none;
 }
 
 ion-icon {
@@ -790,6 +815,7 @@ main img {
 #Question { 
   display: grid;
   grid-template-rows: 20% 80%;
+  grid-template-columns: minmax(75%, 98.9%);
   justify-content: center;
  
   opacity: 1;
@@ -821,7 +847,7 @@ main img {
   border-radius: 24px;
   border: 1px solid rgba(131, 131, 131, 0.25);
   height: 90%;
-  width: 40rem;
+  
 }
 
 /*Fazer a trocação de icons ao apertar*/
@@ -863,9 +889,9 @@ details[open] summary::after {
   row-gap: 1rem;
 
   grid-template-rows: minmax(5%, 5%) minmax(20%, 95%);
-  grid-template-columns: auto;
+  grid-template-columns: minmax(90%, 98.9%);
 
-  width: 99.9%;
+  max-width: 98.9%;
   height: 111vh;
 }
 
@@ -1016,6 +1042,57 @@ footer ul {
   padding: 0;
 }
 
-@media (max-width: 770px) {
- 
+@media (max-width: 604px) {
+ header {
+  justify-content: space-around;
+ }
+
+ header nav, header nav ul {
+  display: flex;
+  flex-direction: column;
+ } header nav {
+  justify-content: initial;
+  width: 50%;
+  height: 100vh;
+  background: #ffffff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+ } nav ul li {
+  padding: 5% 0 5% 5%;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+ }
+
+ nav ul li:hover {
+
+ }
+.Redes {
+  justify-content: space-evenly;
+}
+.Redes ion-icon {
+  padding: 2%;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 20%;
+}
+ .NERKO {
+  display: flex;
+ }
+
+ .pseud {
+  display: inline;
+  height: 3px;
+  width:100% ;
+  background: linear-gradient(88deg, #2600FC 0%, #FF00EA 100%);
+ }
+
+ .onMobile {
+  display: flex;
+  align-items: center;
+ }
+
+ header button {
+  display: flex;
+  cursor: pointer;
+ }
 }
