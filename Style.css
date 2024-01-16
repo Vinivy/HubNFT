@@ -46,6 +46,11 @@ header nav {
   height: 13%;  align-items: center; padding: 0 0 0 5%;
 }
 .Redes {
+  display: none;
+  align-items: center;
+}
+
+.onMobile {
   display: flex;
   align-items: center;
 }
@@ -79,10 +84,6 @@ header ul li {
 }
 
 header button {
-  display: none;
-}
-
-.onMobile {
   display: none;
 }
 
@@ -154,8 +155,8 @@ main img {
 }
 
 .Members img {
-  width: 65px;
-  height: 30px;
+  width: 15%;
+  height: 65%;
 }
 
 .Members span h3 {
@@ -1050,31 +1051,35 @@ footer ul {
  header nav, header nav ul {
   display: flex;
   flex-direction: column;
- } header nav {
+ } 
+ 
+ header nav {
   justify-content: initial;
   width: 50%;
   height: 100vh;
   background: #ffffff;
   position: fixed;
-  right: 0;
-  top: 0;
+  right: -100%;
   z-index: 10;
- } nav ul li {
+  transition: 1s all ease;
+ } 
+ 
+ nav ul li {
   padding: 5% 0 5% 5%;
   border: 1px solid rgba(0, 0, 0, 0.10);
  }
 
- nav ul li:hover {
-
- }
 .Redes {
+  display: flex;
   justify-content: space-evenly;
 }
+
 .Redes ion-icon {
   padding: 2%;
   border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 20%;
 }
+
  .NERKO {
   display: flex;
  }
@@ -1086,13 +1091,127 @@ footer ul {
   background: linear-gradient(88deg, #2600FC 0%, #FF00EA 100%);
  }
 
- .onMobile {
-  display: flex;
-  align-items: center;
+ #Tw {
+  display: none;
  }
 
  header button {
   display: flex;
   cursor: pointer;
+  position: relative;
+  z-index: 20;
+  transition: 1s all ease-out;
  }
+
+ /*primeira pagina*/
+ #Home {
+  height: 140vh;
+ }
+ main {
+  grid-template-columns: minmax(90%, 100%);
+ }
+
+ main img {
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+ }
+
+ .Info {
+  justify-items: center;
+  text-align: center;
+  justify-self: center;
+  width: 90%;
+ }
+
+ .Info button {
+  width: 100%;
+ }
+
+ .Members img {
+  width: 38%;
+  height: 75%;
+ }
+
+ /*segunda pagina*/
+
+ /*Segunda pagina*/
+ #Choose {
+  height: 120vh;
+ }
+
+ .itensCho {
+  grid-template-columns: repeat(2, 1fr 1fr);
+ }
+
+ .MarcasFundadoras {
+  grid-template-columns: repeat(3, minmax(50px, 300px));
+ }
+}
+
+@media (max-width : 530px ) {
+  .MarcasFundadoras {
+    grid-template-columns: repeat(2, minmax(50px, 300px));
+  }
+
+  .Exodus {
+    position: relative;
+    top: 50%;
+    left: 50%;
+  }
+
+  .NFTS {
+    grid-template-columns: 1fr;
+  }
+
+  .picture:nth-child(5),
+  .picture:nth-child(4), 
+  .picture:nth-child(3) {
+    display: none;
+  }
+
+  #View {
+    width: 50%;
+  }
+
+  #Choose {
+    grid-template-rows: minmax(4%, 4%) minmax(5%, 71%) minmax(5%, 2%) minmax(10%, 20%);
+    height: 140vh;
+  }
+
+  .us {
+    grid-template-rows: 20% 60%;
+    height: 100%;
+    row-gap: 0%;
+    align-content: center;
+  }
+
+  .itensCho {
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .conectados {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5%;
+  }
+
+  #Works {
+    display: grid;
+    justify-items: center;
+    height: 300vh;
+    grid-template-rows: 3.5% 4% 31% 31% 31%;
+    grid-row-gap: 0;
+    margin: 2em 0 0 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .wallet, .artwork, .plataform {
+    grid-template-columns: 100%;
+    grid-template-rows: 47% 50%;
+    row-gap: 3%;
+
+  }
 }

@@ -119,6 +119,21 @@ function toggleDarkMode() {
   }
 }
  
-function onMobile() {
-  
+function onMobileToggle() {
+  let NavBar = document.querySelector('nav');
+  let active = NavBar.style.right === '0px';
+  let Toggle = document.querySelector('.TOGGLE')
+  if (!active) {
+    NavBar.style.right = '0';
+    NavBar.style.top = '0';
+    Toggle.style.right = '5%'
+    Toggle.style.top = '6%'
+    Toggle.style.position = 'fixed'
+  } else {
+    NavBar.style.right = '-100%'; // Ou a posição inicial desejada quando estiver oculto
+    NavBar.style.top = '0';  // Mantenha isso se a posição superior deve ser alterada
+    Toggle.style.top = '0'
+    Toggle.style.position = 'relative'
+  }
 }
+
